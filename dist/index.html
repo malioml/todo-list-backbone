@@ -8,14 +8,37 @@
     <title>Todo List App with Backbone</title>
 </head>
 <body>
+    <script type="text/template" id="todo-template">
+        <td>
+            <span class="description"><%= description %></span>
+        </td>
+        <td class="cell-buttons">
+            <button class="btn btn-warning todo-edit">Edit</button>
+            <button class="btn btn-danger todo-delete">Delete</button>
+            <button class="btn btn-success todo-update d-none">Update</button>
+            <button class="btn btn-danger todo-cancel d-none">Cancel</button>
+        </td>
+    </script>
     <div class="container">
-        <table class="table">
+        <div class="table-responsive">
+            <table class="table">
             <thead>
-            <th>Description</th>
-            <th></th>
+                <tr>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="text" class="form-control todo-description">
+                    </th>
+                    <th class="cell-buttons">
+                        <button class="btn btn-success todo-add">Add</button>
+                    </th>
+                </tr>
             </thead>
             <tbody class="todo-list"></tbody>
         </table>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
